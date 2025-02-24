@@ -1,0 +1,61 @@
+/* Dark background covering the entire screen */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent dark overlay */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensures the modal stays on top */
+}
+  
+/* Modal box */
+.modal-content {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Adds a subtle shadow */
+    width: 400px;
+    max-width: 90%;
+    text-align: center;
+    position: relative;
+    animation: fadeIn 0.3s ease-out; /* Smooth fade-in animation */
+}
+  
+/* Modal body content */
+.modal-body {
+    margin: 20px 0;
+    font-size: 16px;
+    color: #333;
+}
+  
+/* Close button */
+.modal-close-btn {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s;
+}
+  
+.modal-close-btn:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+  
+/* Smooth fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
